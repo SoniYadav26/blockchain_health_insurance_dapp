@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
         <main className="relative py-10">
           <div className="px-4 sm:px-6 lg:px-8 relative">
             <div className="relative z-10">
-              {/* Is 'children' ke andar  saare pages (Dashboard, Plans etc.) dikhenge */}
               {children}
             </div>
           </div>

@@ -24,7 +24,6 @@ const Sidebar = ({ open, setOpen }) => {
       {/*  MOBILE SIDEBAR */}
       {open && (
         <div className="fixed inset-0 z-50 lg:hidden">
-          {/* Background overlay */}
           <div
             className="absolute inset-0 bg-gray-900/80"
             onClick={() => setOpen(false)}

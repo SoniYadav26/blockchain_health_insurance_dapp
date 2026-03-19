@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { 
-  FiShield, FiZap, FiCheck, FiArrowRight, FiActivity, FiUsers 
+  FiShield, FiZap, FiArrowRight, FiUsers 
 } from "react-icons/fi";
 
 export default function LandingPage() {
@@ -66,7 +66,7 @@ export default function LandingPage() {
               onClick={connectWallet}
               className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-xl transition"
               >
-              Connect Wallet
+              Start free trial <FiArrowRight className="inline-block ml-2" />
             </button>
 
           </Link>
