@@ -1,3 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 1. Base Styles - Project layout ko clean rakhta hai */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+
+  /* Scrollbar ko modern aur patla banane ke liye */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-indigo-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-indigo-400;
+  }
+}
+
+/* 2. Component Styles - Jo aapne components mein use kiye hain */
+@layer components {
+  
+  /* Buttons - Clean and Consistent */
+  .btn {
+    @apply px-4 py-2 rounded-xl font-semibold transition-all duration-200 active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-indigo-600 text-white hover:bg-indigo-700 shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply btn border border-gray-200 bg-white text-gray-700 hover:bg-gray-50;
+  }
+
+  /* Cards - Jaisa humne PolicyCard mein rakha hai */
+  .policy-card {
+    @apply bg-white rounded-2xl border border-gray-100 p-5 shadow-sm hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Status Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider;
+  }
+
+  /* Form Inputs - Clean look */
+  .form-input {
+    @apply block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none;
+  }
+
+  /* Glass Effect for Modals */
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+}
+
+/* 3. Utility Styles - Daily use ke liye simple shortcut */
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+}
+
+/* 4. RainbowKit Fixes - Wallet connect button styling */
+[data-rk] {
+  --rk-colors-accentColor: #4f46e5; /* Indigo-600 */
+  --rk-radii-connectButton: 12px;
+  --rk-radii-modal: 24px;
+}
+
+/* Print styles ko simple rakha hai */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
